@@ -1,10 +1,11 @@
 class Tile
-  def initialize (name, buyable)
+  attr_accessor :name
+  attr_accessor :position
+  def initialize (name, buyable, position)
     @name = name
     @buyable = buyable
+    @position = position
   end
-
-  attr_accessor :name
 
   def buyable?
     @buyable

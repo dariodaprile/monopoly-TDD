@@ -1,7 +1,9 @@
 class Player
+	attr_accessor :position
 	def initialize(balance, name)
 		@balance=balance
 		@land=[]
+		@position = 0
 	end
 	def pay_rent(rent)
 		if @balance < rent
@@ -21,6 +23,6 @@ class Player
 	end
 	def owns_land?(land)
 		@land.include? land
-		# @land="Mayfair"
 	end
+
 end

@@ -13,10 +13,15 @@ class TileTest < MiniTest::Unit::TestCase
     assert_equal true, @tile.buyable?
   end
 
+  def test_position_is_set_at_initialize
+    assert_equal 10, @tile.position
+  end
+
 # we create a method private ( TBD ?????)
 private
 
   def create_tile
-    @tile = Tile.new("Mayfair", true)
+    @tile = Tile.new("Mayfair", true, 10)
   end
+
 end

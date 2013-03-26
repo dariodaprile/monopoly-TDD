@@ -1,20 +1,34 @@
 require "minitest/autorun"
-require "./lib/land"
+# start from the super clas in order
 require "./lib/tile"
+require "./lib/land"
 
 class LandTest < MiniTest::Unit::TestCase
 
+  def setup
+    create_land
+  end
+
 	def test_rent_is_defined
-	land = Land.new(100, 1000, "Mayfair")
-	assert_equal 100, land.calculate_rent
+	  assert_equal 100, @land.calculate_rent
 	end
 
   def test_has_value
-    land = Land.new(100, 1000, "Mayfair")
-    assert_equal 1000, land.value
+    assert_equal 1000, @land.value
   end
 
+  def test_change_availablity
+    assert_equal false, @land.available?(false)
+  end
 
+  #def see_avalability
+   # assert_equal true, @land.see_available
+  #end
 
-  # def test_is_aveilable
+  private
+
+  def create_land
+     @land = Land.new(100, 1000, "Mayfair", 10)
+  end
+
 end

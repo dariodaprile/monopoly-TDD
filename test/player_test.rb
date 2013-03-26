@@ -1,10 +1,11 @@
 require "minitest/autorun"
 require "./lib/player"
 
+
 class PlayerTest < MiniTest::Unit::TestCase
 
 	def setup
-		@player = Player.new(1000, "Ben")
+		create_player
 	end
 
 	def test_pay_rent
@@ -40,4 +41,17 @@ class PlayerTest < MiniTest::Unit::TestCase
 		assert_equal true, @player.owns_land?("Park Lane")
 	end
 
+def test_start_position_is_zero
+	assert_equal 0, @player.position
+end
+
+	def test_reveive_rent
+	end
+
+
+  private
+
+  def create_player
+  	@player = Player.new(1000, "Ben")
+  end
 end
