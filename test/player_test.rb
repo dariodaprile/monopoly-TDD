@@ -45,7 +45,13 @@ def test_start_position_is_zero
 	assert_equal 0, @player.position
 end
 
-	def test_reveive_rent
+	def test_balance_update_when_get_rent
+		@player.get_rent(200)
+		assert_equal 1200, @player.balance
+	end
+
+	def test_name_exist
+		assert_equal "Ben", @player.name
 	end
 
 
