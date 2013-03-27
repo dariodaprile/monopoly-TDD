@@ -1,13 +1,15 @@
 require "minitest/autorun"
-require "./lib/player"
-require "./lib/tile"
-require "./lib/land"
-
-class EngineTest
+require "mocha/setup"
+require "./lib/engine"
 
 
-  # def test_create_players
-  # end
+class EngineTest < MiniTest::Unit::TestCase
+
+
+  def test_run_works_with_get_stubbed
+    stub_gets.returns("hello)")
+    assert_output("hello") {@engine.take_turn}
+  end
 
   # def test_roll_dice
   # end
