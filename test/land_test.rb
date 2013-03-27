@@ -10,7 +10,7 @@ class LandTest < MiniTest::Unit::TestCase
   end
 
 	def test_rent_is_defined
-	  assert_equal 100, @land.calculate_rent
+	  assert_equal 100, @land.rent
 	end
 
   def test_has_value

@@ -54,10 +54,12 @@ end
 		assert_equal "Ben", @player.name
 	end
 
+	# def test_show_owned_land
+	# end
 
   private
 
   def create_player
-  	@player = Player.new(1000, "Ben")
+  	@player = Player.new("Ben")
   end
 end

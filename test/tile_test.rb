@@ -10,7 +10,7 @@ class TileTest < MiniTest::Unit::TestCase
   end
 
   def test_is_buyable
-    assert_equal true, @tile.buyable?
+    assert_equal true, @tile.buyable
   end
 
   def test_position_is_set_at_initialize

@@ -1,9 +1,9 @@
 class Player
 	attr_accessor :position
 	attr_reader :name, :balance
-	def initialize(balance, name)
+	def initialize(name)
 		@name = name
-		@balance=balance
+		@balance=1000
 		@land=[]
 		@position = 0
 	end
