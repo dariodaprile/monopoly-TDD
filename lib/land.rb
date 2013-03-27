@@ -2,8 +2,9 @@ class Land < Tile
   # def value
   #   @value
   # end
-attr_reader :value, :rent
-  def initialize(rent, value, name, position )
+  attr_reader :value, :rent
+
+  def initialize(rent, value, name, position)
     @rent=rent
     @value=value
     @available = true
@@ -15,5 +16,3 @@ attr_reader :value, :rent
   end
 
 end
-
-

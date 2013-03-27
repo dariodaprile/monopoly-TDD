@@ -1,7 +1,8 @@
 class Dice
 
   def roll
-    (1 + rand(6)) + (1 + rand(6))
+    random = Random.new
+    random.rand(1..6) + random.rand(1..6)
   end
 
 end
