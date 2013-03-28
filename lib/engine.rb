@@ -1,11 +1,3 @@
-require "player"
-require "tile"
-require "land"
-require "board"
-require "dice"
-
-
-
 class Engine
   def initialize
     # @board
@@ -20,16 +12,21 @@ class Engine
   private
 
   def turn(player)
-
+  end
     # roll_dice
+
     # move_player
+  #dice = Dice.new
+
+
+
     # test_tile_availability?
     # if available
     #   buy?
     # else
     #   pay_rent
     # end
-  end
+
 
   # def buy?
   #   puts "What do you want to buy?"
@@ -40,5 +37,6 @@ class Engine
 
 end
 
-@dice = Dice.new
-puts @dice.roll
+
+
+
