@@ -18,8 +18,10 @@ class Board
 # and postition i
 # return an array of tiles
 
-    Array.new(40) do |i|
+    Array.new(41) do |i|
       Land.new i *10 , i * 100, "#{i} street", i
     end
   end
+
+
 end

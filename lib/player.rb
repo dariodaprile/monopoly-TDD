@@ -2,7 +2,7 @@ class Player
   attr_accessor :position
   attr_reader :name, :balance
 
-  STARTING_BALANCE = 1000
+    STARTING_BALANCE = 1000
 
   def initialize(name)
     @name, @balance = name, STARTING_BALANCE
@@ -32,6 +32,9 @@ class Player
     @balance += rent
   end
 
+  def land_list
+    @land.each { |e| puts e.name}
+  end
   private
 
   def can_afford?(value)
@@ -39,6 +42,6 @@ class Player
   end
 
   def deduct_balance!(value)
-  	@balance -= value
+    @balance -= value
   end
 end
