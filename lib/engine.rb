@@ -21,6 +21,9 @@ class Engine
 
 
     # test_tile_availability?
+
+    # not to test: if player.position == tile.position
+
     # if available
     #   buy?
     # else
